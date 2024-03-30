@@ -1,6 +1,9 @@
 module "helm-nginx" {
-    source = "../"
+  source = "../"
 
-    app_name = "nginx"
+  app_name = "nginx"
+  namespace = "nginx-app"
 
+  cpu_max = "300m"
+  mem_max = "1024Mi" 
 }
